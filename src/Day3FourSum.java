@@ -4,8 +4,6 @@ import java.util.List;
 
 public class Day3FourSum {
 
-
-
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> ans = new ArrayList<>();
         int len = nums.length;
