@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class Day1TwoSum {
 
@@ -12,7 +14,38 @@ public class Day1TwoSum {
         return new int[] {};                            // No solution found
     }
 
-    public static void main(String[] args) {
+    public int[] twoSum2(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            map.put(nums[i], i);
+        }
 
+        for (int i = 0; i < nums.length; i++) {
+            int ans = target - nums[i];
+            if (map.containsKey(ans) && map.get(ans) != i) {
+                return new int[]{i, map.get(ans)};
+            }
+        }
+        return new int[]{};
     }
-}
+
+
+
+    public int[] twoSum3(int[] nums, int target) {
+        Map<Integer, Integer> numMap = new HashMap<>();
+        int n = nums.length;
+
+        for (int i = 0; i < n; i++) {
+            int complement = target - nums[i];
+            if (numMap.containsKey(complement)) {
+                return new int[]{numMap.get(complement), i};
+            }
+            numMap.put(nums[i], i);
+        }
+
+        return new int[]{}; // No solution found
+    }
+        public static void main (String[]args){
+
+        }
+    }
