@@ -1,5 +1,10 @@
 package Arrays;
 
+import com.sun.source.doctree.SeeTree;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class Day1RemoveDuplicateFromSortedArray {
 
     public int removeDuplicates(int[] nums) {
@@ -12,6 +17,16 @@ public class Day1RemoveDuplicateFromSortedArray {
         }
         return j;            // return j
     }
+
+    public int removeDuplicates2(int[] nums) {
+    Set<Integer> set = new HashSet();
+        for(int i=0;i<nums.length;i++) {
+        if(set.contains(nums[i]))
+            return nums[i];
+        set.add(nums[i]);
+    }
+        return -1;
+}
 
     public static void main(String[] args) {
 
