@@ -1,3 +1,5 @@
+package Arrays;
+
 public class Day1RemoveDuplicateFromSortedArray {
 
     public int removeDuplicates(int[] nums) {

@@ -1,3 +1,5 @@
+package Arrays;
+
 public class Day2MergeTwoSortedArray {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {

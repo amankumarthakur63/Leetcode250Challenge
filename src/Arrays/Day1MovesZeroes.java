@@ -1,3 +1,5 @@
+package Arrays;
+
 public class Day1MovesZeroes {
 
     public void moveZeroes(int[] nums) {
