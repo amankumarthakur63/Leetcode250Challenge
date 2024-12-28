@@ -3,7 +3,7 @@ package Stack;
 import java.util.Stack;
 
 public class ValidParentheses {
-
+//this method is use for Stack implementation
     public boolean isValid(String s) {
         Stack <Character> str = new Stack<>();
         for (char c : s.toCharArray()) {
